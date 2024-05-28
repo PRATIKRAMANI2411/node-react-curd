@@ -12,7 +12,7 @@ const PostComponent = () => {
     const [image, setImage] = useState("")
     const [message, setMessage] = useState("");
 
-    const handleSubmit = async (e) => {        
+    const handleSubmit = async (e) => {
         e.preventDefault();
         try {
             const URL = "http://localhost:8002/api/create-post";
