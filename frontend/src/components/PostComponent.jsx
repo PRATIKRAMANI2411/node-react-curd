@@ -5,8 +5,10 @@ import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const PostComponent = () => {
+    const navigate = useNavigate();
     const [title, setTitle] = useState("")
     const [date, setDate] = useState("")
     const [image, setImage] = useState("")
@@ -36,7 +38,8 @@ const PostComponent = () => {
             setMessage("Post Faile", );
         }
         setTimeout(() => {
-            setMessage('')
+            setMessage('');
+            navigate("/show");
         }, 2000);
 
         
