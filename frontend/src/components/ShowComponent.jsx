@@ -22,11 +22,7 @@ const ShowComponent = () => {
     };
     useEffect(() => {
         fetchPosts();
-
-        const intervalId = setInterval(fetchPosts, 1000);
-
-        return () => clearInterval(intervalId);
-    }, [posts])
+    }, [])
 
     const deletePost = async (id, e) => {
         const responce = await axios.get("http://localhost:8002/api/delete-posts/" + id);
